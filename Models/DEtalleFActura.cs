@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -19,8 +20,11 @@ namespace AppSerWEB.Models
         public int CodigoProducto { get; set; }
         public int Cantidad { get; set; }
         public int ValorUnitario { get; set; }
-    
+        [JsonIgnore]
+
         public virtual PRODucto PRODucto { get; set; }
+        [JsonIgnore]
+
         public virtual FACTura FACTura { get; set; }
     }
 }

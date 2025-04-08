@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -17,7 +18,8 @@ namespace AppSerWEB.Models
         public int IdFoto { get; set; }
         public string idEmpleado { get; set; }
         public string NombreFoto { get; set; }
-    
+        [JsonIgnore]
+
         public virtual EMPLeado EMPLeado { get; set; }
     }
 }

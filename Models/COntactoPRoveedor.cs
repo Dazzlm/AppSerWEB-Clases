@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,7 +21,8 @@ namespace AppSerWEB.Models
         public string Telefono { get; set; }
         public string Cargo { get; set; }
         public string DocumentoProveedor { get; set; }
-    
+        [JsonIgnore]
+
         public virtual PROVeedor PROVeedor { get; set; }
     }
 }

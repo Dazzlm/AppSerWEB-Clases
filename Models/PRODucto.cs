@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -30,14 +31,23 @@ namespace AppSerWEB.Models
         public int ValorUnitario { get; set; }
         public int CodigoTipoProducto { get; set; }
         public bool Activo { get; set; }
-    
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DEtalleFActura> DEtalleFActuras { get; set; }
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DEtalleFacturaCompra> DEtalleFacturaCompras { get; set; }
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ImagenesProducto> ImagenesProductoes { get; set; }
+        [JsonIgnore]
+
         public virtual TIpoPRoducto TIpoPRoducto { get; set; }
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRoductoPRoveedor> PRoductoPRoveedors { get; set; }
     }

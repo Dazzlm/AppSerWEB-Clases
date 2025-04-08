@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -24,9 +25,12 @@ namespace AppSerWEB.Models
         public string Nombre { get; set; }
         public bool Activo { get; set; }
         public int CodigoDepartamento { get; set; }
-    
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SUCUrsal> SUCUrsals { get; set; }
+        [JsonIgnore]
+
         public virtual DEPArtamento DEPArtamento { get; set; }
     }
 }

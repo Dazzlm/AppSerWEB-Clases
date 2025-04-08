@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -25,10 +26,15 @@ namespace AppSerWEB.Models
         public int NumeroFactura { get; set; }
         public System.DateTime Fecha { get; set; }
         public int CodigoEmpleado { get; set; }
-    
+        [JsonIgnore]
+
         public virtual CLIEnte CLIEnte { get; set; }
+        [JsonIgnore]
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DEtalleDEvolucion> DEtalleDEvolucions { get; set; }
+        [JsonIgnore]
+
         public virtual EMpleadoCArgo EMpleadoCArgo { get; set; }
     }
 }

@@ -9,6 +9,7 @@
 
 namespace AppSerWEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -18,8 +19,11 @@ namespace AppSerWEB.Models
         public string Numero { get; set; }
         public string Documento { get; set; }
         public int CodigoTipoTelefono { get; set; }
-    
+        [JsonIgnore]
+
         public virtual CLIEnte CLIEnte { get; set; }
+        [JsonIgnore]
+
         public virtual TIpoTElefono TIpoTElefono { get; set; }
     }
 }
