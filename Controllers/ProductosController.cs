@@ -9,6 +9,7 @@ using System.Web.Http;
 namespace AppSerWEB.Controllers
 {
     [RoutePrefix("api/Productos")]
+    [Authorize]
     public class ProductosController:ApiController
 	{
 

@@ -10,6 +10,7 @@ using System.Web.Http;
 namespace AppSerWEB.Controllers
 {
     [RoutePrefix ("api/Empleados")]
+    [Authorize]
     public class EmpleadosController : ApiController
     {
         [HttpGet]
